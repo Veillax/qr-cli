@@ -28,3 +28,19 @@ Download from the `src` folder and place it in a folder either set in PATH or yo
 Supports most URIs, but some aren't common formatting to allow for propper parsing. An example of this is the Wifi, the common URI is `WIFI:T:{protocol};S:{ssid};P:{passwd};;`,
 but to properly parse it I had to set it to parse `WIFI:{protocol}--{ssid}--{passwd}`. Same thing happened with the market URI but you can still use `market://<app_package>`,  
 but the naming convention for the qr code will say `qr-web_<app_package>` instead of `qr-market_<app_package>`
+
+QR codes will be saved to batch/qrcodes with these naming schemes:  
+ - URLs:  
+   - IP: `qr-ip_http_<ip>[:<port> if provided].png`  
+   - HTTPS: `qr-web_https_<website>[_<route> if provided].png`  
+   - HTTP: `qr-web_http_<website>[_<route> if provided].png`  
+
+
+ - URIs:
+   - tel: `qr-tel_[+<country_code> if provided]<phone_number>.png`
+   - sms: `qr-sms_[+<country_code> if provided]<phone_number>.png`
+   - mailto: `qr-maito_<email_address>`
+   - market: `qr-market_<app_package>`
+   - wifi: `qr-wifi_<protocol>_<ssid>`
+   - facetime[-audio]: `qr-facetime[_audio]_[<icloud_email_address>/[+<country_code> if provided]<phone_number>].png`
+   - geo: `qr-geo_<latitude>_<longitude>`
