@@ -5,7 +5,7 @@ import qrcode
 import re 
 
 # Define the path to store generated QR codes
-qrcodes_path = os.path.join(os.environ['USERPROFILE'], "batch\\qrcodes")
+qrcodes_path = os.path.join(os.getcwd(), "batch\\qrcodes")
 
 # Function to generate QR code for a given URL
 def qr_gen(url):
