@@ -25,9 +25,9 @@ Download from the `src` folder and place it in a folder either set in PATH or yo
 	 - facetime - FaceTime Video - Usage: "facetime:<icloud_email_address/phone_number>"
 	 - facetime-audio - FaceTime Audio - Usage: "facetime-audio:<icloud_email_address/phone_number>"
 	 - geo - Geolocation - Usage: "geo:<latitude>,<longitude>" 
-Supports most URIs, but some aren't common formatting to allow for propper parsing. An example of this is the Wifi, the common URI is `WIFI:T:{protocol};S:{ssid};P:{passwd};;`,
+Supports most URIs, but some aren't common formatting to allow for propper parsing. An example of this is the Wifi, the common URI is `WIFI:T:{protocol};S:{ssid};P:{passwd};;`,  
 but to properly parse it I had to set it to parse `WIFI:{protocol}--{ssid}--{passwd}`. Same thing happened with the market URI but you can still use `market://<app_package>`,  
-but the naming convention for the qr code will say `qr-web_<app_package>` instead of `qr-market_<app_package>`
+but the naming convention for the qr code will say `qr-web_market_<app_package>` instead of `qr-market_<app_package>`  
 
 QR codes will be saved to batch/qrcodes with these naming schemes:  
  - URLs:  
